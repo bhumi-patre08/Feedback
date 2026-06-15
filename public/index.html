@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Share Your Feedback</title>
+  <!-- Google Fonts for premium typography -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <!-- Ionicons for modern visual icons -->
+  <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- Ambient background blobs -->
+  <div class="blob blob-1"></div>
+  <div class="blob blob-2"></div>
+
+  <main class="container">
+    <div class="feedback-card">
+      <header class="card-header">
+        <div class="logo-icon">
+          <ion-icon name="chatbubble-ellipses-outline"></ion-icon>
+        </div>
+        <h1>Send Feedback</h1>
+        <p>We would love to hear your thoughts, suggestions, or concerns.</p>
+      </header>
+
+      <!-- Status Alert Box -->
+      <div id="status-container" class="status-box hidden" role="alert">
+        <span class="status-icon"><ion-icon name="information-circle-outline"></ion-icon></span>
+        <span id="status-message" class="status-text"></span>
+      </div>
+
+      <!-- Feedback Form -->
+      <form id="feedback-form" novalidate>
+        <!-- Name Field -->
+        <div class="input-group">
+          <input type="text" id="name" name="name" required placeholder=" ">
+          <label for="name">
+            <ion-icon name="person-outline"></ion-icon> Name
+          </label>
+          <span class="focus-border"></span>
+        </div>
+
+        <!-- Email Field -->
+        <div class="input-group">
+          <input type="email" id="email" name="email" required placeholder=" ">
+          <label for="email">
+            <ion-icon name="mail-outline"></ion-icon> Email Address
+          </label>
+          <span class="focus-border"></span>
+        </div>
+
+        <!-- Message Field -->
+        <div class="input-group">
+          <textarea id="message" name="message" required placeholder=" " rows="4"></textarea>
+          <label for="message">
+            <ion-icon name="create-outline"></ion-icon> Your Message
+          </label>
+          <span class="focus-border"></span>
+        </div>
+
+        <!-- Custom File Attachment Upload Zone -->
+        <div class="file-upload-container">
+          <p class="file-label-text">Attachment (Optional - PDF, PNG, JPG)</p>
+          <label for="attachment" class="file-drop-zone" id="drop-zone">
+            <input type="file" id="attachment" name="attachment" accept=".pdf,.png,.jpg,.jpeg">
+            <div class="drop-zone-content">
+              <ion-icon name="cloud-upload-outline" class="upload-icon"></ion-icon>
+              <span class="upload-prompt" id="file-prompt">Choose a file or drag & drop</span>
+              <span class="file-info" id="file-name-display">Max size 5MB</span>
+            </div>
+          </label>
+        </div>
+
+        <!-- Submit Button -->
+        <button type="submit" id="submit-btn" class="submit-button">
+          <span class="btn-text">Submit Feedback</span>
+          <span class="spinner hidden"></span>
+        </button>
+      </form>
+    </div>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
