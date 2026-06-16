@@ -50,7 +50,7 @@ To execute, inspect, or test this full-stack application on your machine:
 
 2.Navigate into the directory folder:
   Bash
-  cd YOUR_REPOSITORY_NAME
+  cd Feedback
   
 3.Install the required dependencies:
   Bash
